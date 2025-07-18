@@ -1,0 +1,65 @@
+% this file combines all documents
+% you can also run each document separately
+
+\documentclass[11pt, notitlepage]{article} 
+
+
+\usepackage{nih}
+\usepackage{xcolor}
+ 
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\graphicspath{{figs/}} 
+
+
+
+%\usepackage[nomarkers]{endfloat}
+
+\addbibresource{references1.bib}
+%\addbibresource{references2.bib} 
+
+
+\usepackage{blindtext}
+
+\usepackage{subfiles}
+
+
+\begin{document}
+
+
+
+% \subfile{IntroToRevision}
+
+% \clearpage
+
+\subfile{SpecificAims}
+
+
+\clearpage
+
+\subfile{ResearchStrategy}
+
+
+
+\clearpage
+
+\subfile{abstract}
+
+
+
+\clearpage
+
+\subfile{narrative}
+
+
+
+
+
+\clearpage
+\printbibliography
+ 
+\end{document}
+
+
+

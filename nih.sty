@@ -1,0 +1,141 @@
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+
+%------------------------------------------------------
+% PAGE LAYOUT
+%------------------------------------------------------
+
+
+% Margins
+\usepackage[top=0.50in,bottom=0.5in,left=0.5in,right=0.5in]{geometry} 
+
+\usepackage{amsfonts, amsmath, amsthm, amssymb} 
+
+
+
+
+%------------------------------------------------------
+% SECTIONING
+%------------------------------------------------------
+
+\usepackage{titlesec}
+
+% Section headers
+\titleformat{\section} {\normalsize\bf}{\thesection}{1ex}{}
+\titleformat{\subsection}{\normalsize\bf}{\thesubsection}{1ex}{}
+\titleformat{\subsubsection}{\normalsize\bf}{\thesubsubsection}{1ex}{}
+
+
+
+%\titleformat{\subsection}[runin]{\normalsize\bf}{\thesection.\thesubsection}{1ex}{}[.\,]
+%\titleformat{\subsubsection}[runin]{\normalsize\bf}{\thesection.\thesubsection.\thesubsubsection}{1ex}{}[.\,]
+
+
+% label numbering
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\Alph{section}.\arabic{subsection}.\alph{subsubsection}}
+
+% spacing for sectioning
+\titlespacing{\section}
+  {0em}{0em}{0em}
+\titlespacing{\subsection}
+  {0em}{0em}{0em}
+\titlespacing{\subsubsection}
+  {0em}{0em}{0em}
+
+%------------------------------------------------------
+% PARAGRAPH AND LINE SPACING
+%------------------------------------------------------
+
+
+% indentation and paragraph spacing
+\setlength\parindent{0pt}
+\setlength\parskip{.25em}
+
+\titlespacing\section{0pt}{0pt}{-0.25em}
+\titlespacing\subsection{0pt}{-0.12em}{-0.25em}
+\titlespacing\subsubsection{0pt}{-0.12em}{-0.25em}
+
+
+       
+%\titleformat{\subsection}[runin]{0pt}{0pt}{-0.25em}
+
+%------------------------------------------------------
+% FONT
+%------------------------------------------------------
+
+% font
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+% underline with linebreaks using \ul
+%\usepackage{soul}
+
+%\renewcommand{\underline}[1]{\underline{\smash{ #1 }}}
+\newcommand{\smashul}[1]{\underline{\smash{#1}}}
+%\usepackage{ulem}
+%\renewcommand{\ULdepth}{1.5pt}
+
+%------------------------------------------------------
+% BIBLIOGRAPHY
+%------------------------------------------------------
+
+\RequirePackage[backend=biber,
+                url=false,
+                sortcites=true,
+                sorting=none,
+                style=numeric-comp,
+                autocite    = superscript,
+                maxbibnames=99]{biblatex}
+\setlength\bibitemsep{0pt}
+
+%------------------------------------------------------
+% FIGURES
+%------------------------------------------------------
+
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage[font=scriptsize]{subfig}
+\usepackage{framed}
+\usepackage[font=scriptsize,labelfont={bf}]{caption}
+\renewcommand{\figurename}{Fig.}
+\captionsetup[subfloat]{labelformat=simple}
+
+\FrameSep1pt
+%------------------------------------------------------
+% PAGE NUMBERING
+%------------------------------------------------------
+
+% remove page numbering
+\pagenumbering{gobble}
+
+%------------------------------------------------------
+% ACRONYMS
+%------------------------------------------------------
+
+\usepackage[nolist,nohyperlinks]{acronym}
+
+
+
+%------------------------------------------------------
+% SPACEING
+%------------------------------------------------------
+
+\usepackage{setspace}
+% this gives 59 lines per page.
+\setstretch{.9}
+
+
+%------------------------------------------------------
+% MISC
+%------------------------------------------------------
+
+\newcommand{\bac}[1]{{\color{red} \textbf{bac:} #1}}
+\newcommand{\aw}[1]{{\color{blue} \textbf{aw:} #1}}
+\usepackage{soul} % for strikeout with \st
+
+
